@@ -87,7 +87,7 @@ export default function Home() {
   )
 
   return (
-    <div className="container mx-auto p-16">
+    <div className="container mx-auto px-4 lg:p-16 pt-6">
       <h1 className="text-3xl font-bold mb-8 text-center">To-Do List</h1>
       
       <div className="mb-6 flex flex-col sm:flex-row gap-4">
@@ -108,7 +108,7 @@ export default function Home() {
 
       <div className="space-y-4">
         {filteredTasks.map(task => (
-          <div key={task.id} className="flex items-center justify-between p-4 border rounded-lg">
+          <div key={task.id} className="flex flex-col gap-6 items-start md:flex-row md:items-center md:justify-between p-4 border rounded-lg">
             <div className="flex items-center space-x-4">
               <Checkbox
                 checked={task.completed}
@@ -126,7 +126,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 ">
               <Button
                 variant="outline"
                 size="icon"
